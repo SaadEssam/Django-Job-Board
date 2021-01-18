@@ -1,6 +1,14 @@
 from django.db import models
 
 # Create your models here.
+
+'''
+Django Model Filed:
+    - HTML Widget
+    - Validation
+    - DB Size
+'''
+
 JOB_TYPE = (
     ('Full Time','Full Time'),
     ('Part Time','Part Time'),
@@ -22,7 +30,16 @@ class Job(models.Model): # table
 
     experience = models.IntegerField(default=1)
 
+    category = models.ForeignKey('category',on_delete=models.CASCADE)
+
 
     def __str__(self):
         return self.title
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=25)
+
+    def __str__(self):
+        return self.name
     
