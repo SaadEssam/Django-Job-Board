@@ -37,3 +37,7 @@ Relations :
     - One to Many [user - posts]  Forginkey
     - Many to Many [user - groups]
     - One to One [user - profile]
+
+
+static files : [frontend] images, css, javascript
+media files : [upload] images
