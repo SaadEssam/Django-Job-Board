@@ -13,6 +13,7 @@ class Profile(models.Model):
     def __str__(self):
         return self.user
     
+    
 
 ## Create new user ----> create new empty profile
 
