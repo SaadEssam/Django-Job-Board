@@ -11,7 +11,7 @@ class Profile(models.Model):
     image = models.ImageField( upload_to='profile/')
 
     def __str__(self):
-        return self.user
+        return str(self.user)
     
     
 
@@ -26,5 +26,5 @@ class City(models.Model):
     name = models.CharField(max_length=30)
 
 
-
-
+    def __str__(self):
+        return self.name
