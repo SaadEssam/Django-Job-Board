@@ -28,12 +28,12 @@ def signup(request):
 
 
 def profile(request):
-    profile = profile.objects.get(user=request.user)
+    profile = Profile.objects.get(user=request.user)
     return render(request, 'accounts/profile.html',{'profile': profile})
 
 
 def profile_edit(request):
-    Profile = Profile.objects.get(user=request.user)
+    Profile = profile.objects.get(user=request.user)
 
     if request.method == 'POST':
         userform = UserForm(request.POST,instance=request.user)

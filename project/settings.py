@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     "bootstrap4",
     'django_filters',
     'contact',
+    'rest_framework',
+
     # 'accounts',
 
 ]
